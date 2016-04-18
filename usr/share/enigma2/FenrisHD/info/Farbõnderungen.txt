@@ -1,0 +1,14 @@
+ab der Version 2.0.0 wird die Farbe des Fortschrittsbalken nicht mehr durch ein PNG, also die "Bar.png" im Ordner FenrisHD/colors/fenris/, definiert. Die Farbe wird nun direkt durch den Parameter "fenrisBar" bestimmt. Der Ordner "colors" wird also im FenrisHD nicht mehr benötigt.
+
+es gibt nun eine "skin_user_colors.xml" in der die wichtigsten Farbänderungen durchgeführt werden können. Dies sollte die Möglichkeit von Farbänderungen erheblich vereinfachen. 
+Wer möchte kann diese aber auch löschen und die Änderungen weiter direkt in der skin.xml vornehmen.
+
+der ZahlenCode hinter "value" definiert Transparenz und die Farbe.
+Die ersten beiden Zahlen im Farbcode geben die Transparenz. Die die anderen sechs Zahlen bestimmen die Farbe, also den jeweiligen RGB-Anteil.  
+Der Farb-Parameter lautet also "#xxyyyyyy" 
+xx für Transparenz und yyyyyy für den RGB-Farbcode
+
+Beispiel: value="#00444444" 00 für keine Transparenz und 444444 für die Farbe Grau
+Beispiel: value="#28000000" hier gibt die 28 die Transparenz an und 000000 die Farbe Schwarz.
+
+

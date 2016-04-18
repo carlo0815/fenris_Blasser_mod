@@ -1,0 +1,88 @@
+<skin>
+
+<screen backgroundColor="transparent" flags="wfNoBorder" name="ChannelSelection" position="0,0" size="1280,720" title="Channel Selection">
+  <eLabel backgroundColor="fenrisBackground" position="0,0" size="1280,720" transparent="0" zPosition="-10" />
+  <eLabel backgroundColor="fenrisBorder" position="1,653" size="1278,5" transparent="0" zPosition="-5" />
+  <eLabel backgroundColor="fenrisBorder" position="1,65" size="1278,5" transparent="0" zPosition="-5" />
+  <eLabel backgroundColor="fenrisBackground" position="0,66" size="1280,3" transparent="0" zPosition="0" />
+  <eLabel backgroundColor="fenrisBackground" position="0,654" size="1280,3" transparent="0" zPosition="0" />
+  <eLabel backgroundColor="fenrisBorder" position="415,69" size="1,585" transparent="0" zPosition="-5" />
+  <eLabel backgroundColor="fenrisBorder" position="416,568" size="863,1" transparent="0" zPosition="-5" />
+  <eLabel backgroundColor="fenrisBorder" position="1279,0" size="1,720" transparent="0" zPosition="-5" />
+  <eLabel backgroundColor="fenrisBorder" position="1,0" size="1,720" transparent="0" zPosition="-5" />
+  <eLabel backgroundColor="fenrisBorder" position="0,653" size="1280,5" transparent="0" zPosition="-5" />
+  <eLabel backgroundColor="fenrisBorder" position="0,65" size="1280,5" transparent="0" zPosition="-5" />
+  <!-- /*Uhr-->
+  <widget backgroundColor="fenrisBackground" font="Regular; 40" halign="center" position="175,7" render="Label" size="65,55" source="global.CurrentTime" transparent="1" valign="bottom" zPosition="1" foregroundColor="fenrisTextUhr">
+    <convert type="ClockToText">Format:%H</convert>
+  </widget>
+  <eLabel backgroundColor="fenrisBackground" font="Regular; 38" halign="center" position="231,7" size="15,55" text=":" transparent="1" valign="center" zPosition="1" foregroundColor="fenrisTextUhr" />
+  <widget backgroundColor="fenrisBackground" font="Regular; 40" halign="center" position="237,7" render="Label" size="65,55" source="global.CurrentTime" transparent="1" valign="bottom" zPosition="1" foregroundColor="fenrisTextUhr">
+    <convert type="ClockToText">Format:%M</convert>
+  </widget>
+  <eLabel backgroundColor="fenrisBackground" font="Regular; 28" halign="center" position="292,13" size="15,40" text=":" transparent="1" valign="center" zPosition="1" foregroundColor="fenrisTextUhr" />
+  <widget backgroundColor="fenrisBackground" font="Regular; 28" halign="center" position="297,18" render="Label" size="50,40" source="global.CurrentTime" transparent="1" valign="bottom" zPosition="1" foregroundColor="fenrisTextUhr">
+    <convert type="ClockToText">Format:%S</convert>
+  </widget>
+  <widget backgroundColor="fenrisBackground" font="Regular; 16" foregroundColor="fenrisTextDatum" halign="right" position="50,29" render="Label" size="125,29" source="global.CurrentTime" transparent="1">
+    <convert type="ClockToText">Format:%d. %B</convert>
+  </widget>
+  <widget backgroundColor="fenrisBackground" font="Regular; 16" foregroundColor="fenrisTextDatum" halign="right" position="50,11" render="Label" size="125,30" source="global.CurrentTime" transparent="1">
+    <convert type="ClockToText">Format:%A</convert>
+  </widget>
+  <!--Uhr */-->
+  <widget source="ServiceEvent" render="Label" position="35,90" size="64,24" font="Regular; 21" backgroundColor="fenrisBackground" transparent="1" halign="right">
+    <convert type="EventTime">StartTime</convert>
+    <convert type="ClockToText" />
+  </widget>
+  <widget source="ServiceEvent" render="Label" position="216,90" size="64,24" font="Regular; 21" backgroundColor="fenrisBackground" transparent="1">
+    <convert type="EventTime">EndTime</convert>
+    <convert type="ClockToText">Format:%H:%M</convert>
+  </widget>
+  <widget borderColor="fenrisAccent1" borderWidth="1" foregroundColor="fenrisBackground" position="57,118" render="Progress" size="200,1" source="ServiceEvent" transparent="1" zPosition="1">
+    <convert type="EventTime">Progress</convert>
+  </widget>
+  <widget source="ServiceEvent" render="Progress" position="56,116" size="200,5" foregroundColor="fenrisBar" transparent="1" zPosition="5">
+    <convert type="EventTime">Progress</convert>
+  </widget>
+  <widget backgroundColor="fenrisBackground" font="Regular; 26" foregroundColor="fenrisAccent1" halign="right" position="575,20" render="Label" size="650,40" source="Title" transparent="1" valign="top" noWrap="1" />
+  <widget backgroundColor="fenrisBackground" colorEventProgressbarBorder="fenrisAccent1" colorEventProgressbarBorderSelected="fenrisForeground" colorServiceDescription="fenrisAccent1" colorServiceDescriptionSelected="fenrisForeground" colorServiceRecording="fenrisRed" foregroundColorServiceNotAvail="fenrisDeepGrey" itemHeight="50" name="list" position="425,73" scrollbarMode="showNever" serviceInfoFont="RegularLight;24" serviceItemHeight="35" serviceNameFont="Regular;26" serviceNumberFont="Regular;26" size="845,490" transparent="1" />
+  <widget backgroundColor="fenrisBackground" font="Regular; 24" position="15,144" render="Label" size="390,80" source="ServiceEvent" transparent="1" valign="center" zPosition="1" halign="center" foregroundColor="fenrisForeground">
+    <convert type="FenrisEventName">Name</convert>
+  </widget>
+  <eLabel backgroundColor="fenrisBackground" font="RegularLight; 23" foregroundColor="fenrisAccent1" halign="left" noWrap="1" position="480,572" size="10,30" text=":" transparent="1" valign="center" zPosition="6" />
+  <eLabel backgroundColor="fenrisBackground" font="RegularLight; 23" foregroundColor="fenrisAccent1" halign="left" noWrap="1" position="425,572" size="70,30" text="gleich" transparent="1" valign="center" zPosition="5" />
+  <widget source="ServiceEvent" render="Label" position="501,572" size="770,26" noWrap="1" font="RegularLight;23" foregroundColor="fenrisAccent1" backgroundColor="fenrisBackground" transparent="1">
+    <convert type="FenrisNextEvents">Event1,showDuration</convert>
+  </widget>
+  <widget source="ServiceEvent" render="Label" position="501,598" size="770,26" noWrap="1" font="RegularLight;23" foregroundColor="fenrisAccent1" backgroundColor="fenrisBackground" transparent="1">
+    <convert type="FenrisNextEvents">Event2,showDuration</convert>
+  </widget>
+  <widget backgroundColor="fenrisBackground" font="RegularLight; 23" foregroundColor="fenrisAccent1" options="movetype=running,startpoint=0,direction=top,steptime=100,startdelay=10000,wrap,always=0" position="15,232" render="RunningText" size="390,420" source="ServiceEvent" transparent="1">
+    <convert type="EventName">ExtendedDescription</convert>
+  </widget>
+  <eLabel backgroundColor="fenrisBackground" font="RegularLight; 23" foregroundColor="fenrisOrange" halign="left" noWrap="1" position="480,622" size="10,30" text=":" transparent="1" valign="center" zPosition="6" />
+  <eLabel backgroundColor="fenrisBackground" font="RegularLight; 23" foregroundColor="fenrisOrange" halign="left" noWrap="1" position="425,622" size="70,30" text="Prime" transparent="1" valign="center" zPosition="5" />
+  <widget source="ServiceEvent" render="Label" position="501,624" size="770,26" noWrap="1" font="RegularLight;23" foregroundColor="fenrisOrange" backgroundColor="fenrisBackground" transparent="1">
+    <convert type="FenrisNextEvents">PrimeTime,showDuration</convert>
+  </widget>
+  <!-- /*Buttons-->
+  <ePixmap name="new ePixmap" pixmap="FenrisHD/buttons/key_epg.png" position="1140,675" size="49,24" transparent="0" />
+  <ePixmap name="new ePixmap" pixmap="FenrisHD/buttons/key_menu.png" position="1070,675" size="49,24" />
+  <ePixmap alphatest="blend" pixmap="FenrisHD/buttons/key_red.png" position="80,670" size="30,40" />
+  <ePixmap alphatest="blend" pixmap="FenrisHD/buttons/key_green.png" position="255,670" size="30,40" />
+  <ePixmap alphatest="blend" pixmap="FenrisHD/buttons/key_yellow.png" position="430,670" size="30,40" />
+  <ePixmap alphatest="blend" pixmap="FenrisHD/buttons/key_blue.png" position="605,670" size="30,40" />
+  <widget backgroundColor="fenrisBackground" font="Regular; 20" halign="left" name="key_red" position="118,675" size="130,24" transparent="1" zPosition="1" />
+  <widget backgroundColor="fenrisBackground" font="Regular; 20" halign="left" name="key_green" position="293,675" size="130,24" transparent="1" zPosition="1" />
+  <widget backgroundColor="fenrisBackground" font="Regular; 20" halign="left" name="key_yellow" position="468,675" size="130,24" transparent="1" zPosition="1" />
+  <widget backgroundColor="fenrisBackground" font="Regular; 20" halign="left" name="key_blue" position="643,675" size="130,24" transparent="1" zPosition="1" />
+  <!--Buttons */-->
+  <!-- /*picon-->
+  <widget source="ServiceEvent" render="Picon" position="295,75" size="100,60" zPosition="2" transparent="1" alphatest="blend">
+    <convert type="ServiceName">Reference</convert>
+  </widget>
+  <!-- picon */-->
+</screen>
+
+</skin>

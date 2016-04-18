@@ -1,0 +1,179 @@
+<skin>
+
+<screen backgroundColor="transparent" flags="wfNoBorder" name="InfoBar" position="0,0" size="1280,720" title="InfoBar">
+  <eLabel backgroundColor="fenrisBackground" name="InfoBarPicon" position="0,560" size="251,158" zPosition="-10" />
+  <eLabel backgroundColor="fenrisBackground" name="InfoBarJetzt" position="256,560" size="776,100" zPosition="-10" />
+  <eLabel backgroundColor="fenrisBackground2" name="InfoBarGleich" position="256,665" size="776,55" zPosition="-10" />
+  <eLabel backgroundColor="fenrisBackground" name="InfoBarClock" position="1037,560" size="245,100" zPosition="-10" />
+  <eLabel backgroundColor="fenrisBackground" name="InfoBarIconBar2" position="1037,665" size="245,55" zPosition="-10" />
+  <eLabel backgroundColor="fenrisBorder" position="251,557" size="5,167" transparent="0" zPosition="-5" />
+  <eLabel backgroundColor="fenrisBackground" position="252,558" size="3,164" transparent="0" zPosition="0" />
+  <eLabel backgroundColor="fenrisBorder" position="1032,557" size="5,167" transparent="0" zPosition="-5" />
+  <eLabel backgroundColor="fenrisBackground" position="1033,558" size="3,164" transparent="0" zPosition="0" />
+  <eLabel backgroundColor="fenrisBackground" position="253,661" size="1029,3" transparent="0" zPosition="0" />
+  <eLabel backgroundColor="fenrisBorder" position="254,660" size="1029,5" transparent="0" zPosition="-5" />
+  <eLabel backgroundColor="fenrisBackground" position="0,557" size="1284,2" transparent="0" zPosition="0" />
+  <eLabel backgroundColor="fenrisBorder" position="0,557" size="1284,3" transparent="0" zPosition="-5" />
+  <eLabel backgroundColor="fenrisBorder" position="0,717" size="1284,3" transparent="0" zPosition="-5" />
+  <eLabel backgroundColor="fenrisBackground" position="0,718" size="1284,5" transparent="0" zPosition="0" />
+  <!-- /* Uhrzeit/Datum -->
+  <widget backgroundColor="fenrisBackground" font="Regular; 48" halign="center" position="1065,580" render="Label" size="65,60" source="global.CurrentTime" transparent="1" valign="bottom" zPosition="1" foregroundColor="fenrisTextUhr">
+    <convert type="ClockToText">Format:%H</convert>
+  </widget>
+  <eLabel backgroundColor="fenrisBackground" font="Regular; 38" halign="center" position="1122,573" size="15,60" text=":" transparent="1" valign="bottom" zPosition="1" foregroundColor="fenrisTextUhr" />
+  <widget backgroundColor="fenrisBackground" font="Regular; 48" halign="center" position="1130,580" render="Label" size="65,60" source="global.CurrentTime" transparent="1" valign="bottom" zPosition="1" foregroundColor="fenrisTextUhr">
+    <convert type="ClockToText">Format:%M</convert>
+  </widget>
+  <eLabel backgroundColor="fenrisBackground" font="Regular; 38" halign="center" position="1185,573" size="15,60" text=":" transparent="1" valign="bottom" zPosition="1" foregroundColor="fenrisTextUhr" />
+  <widget backgroundColor="fenrisBackground" font="Regular; 48" halign="center" position="1193,580" render="Label" size="65,60" source="global.CurrentTime" transparent="1" valign="bottom" zPosition="1" foregroundColor="fenrisTextUhr">
+    <convert type="ClockToText">Format:%S</convert>
+  </widget>
+  <widget backgroundColor="fenrisBackground" font="Regular; 18" foregroundColor="fenrisTextDatum" halign="center" position="1053,685" render="Label" size="203,29" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+    <convert type="ClockToText">Format:%d. %B</convert>
+  </widget>
+  <widget backgroundColor="fenrisBackground" font="Regular; 18" foregroundColor="fenrisTextDatum" halign="center" position="1053,665" render="Label" size="203,30" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+    <convert type="ClockToText">Format:%A</convert>
+  </widget>
+  <!--Uhrzeit/Datum */-->
+  <!-- /* EPG -->
+  <widget alphatest="blend" position="15,575" render="Picon" size="220,132" source="session.CurrentService" transparent="1" zPosition="4">
+    <convert type="ServiceName">Reference</convert>
+  </widget>
+  <widget backgroundColor="fenrisBackground" foregroundColor="fenrisTextEPG1" font="Regular;36" halign="left" noWrap="1" options="movetype=running,startpoint=0,direction=left,steptime=50,repeat=5,startdelay=1500,always=0" position="273,567" render="RunningText" size="623,50" source="session.Event_Now" transparent="1">
+    <convert type="EventName">Name</convert>
+  </widget>
+  <widget backgroundColor="fenrisBackground" font="Regular; 24" halign="right" position="900,575" render="Label" size="120,40" source="session.Event_Now" transparent="1" valign="bottom" zPosition="1">
+    <convert type="EventTime">Remaining</convert>
+    <convert type="RemainingToText">InMinutes</convert>
+  </widget>
+  <widget foregroundColor="fenrisBar" position="273,618" render="Progress" size="742,5" source="session.Event_Now" transparent="1" zPosition="7">
+    <convert type="EventTime">Progress</convert>
+  </widget>
+  <widget backgroundColor="fenrisBackground2" font="Regular; 22" foregroundColor="fenrisAccent1" halign="right" noWrap="1" position="253,673" render="Label" size="70,35" source="session.Event_Next" transparent="1" valign="center" zPosition="1">
+    <convert type="EventTime">StartTime</convert>
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <eLabel backgroundColor="fenrisBackground2" font="Regular; 22" foregroundColor="fenrisAccent1" halign="center" noWrap="1" position="325,673" size="40,35" text="bis" transparent="1" valign="center" zPosition="1" />
+  <widget backgroundColor="fenrisBackground2" font="Regular; 22" foregroundColor="fenrisAccent1" halign="left" noWrap="1" position="367,673" render="Label" size="70,35" source="session.Event_Next" transparent="1" valign="center" zPosition="1">
+    <convert type="EventTime">EndTime</convert>
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget backgroundColor="fenrisBackground2" font="Regular; 26" foregroundColor="fenrisTextEPG2" halign="left" options="movetype=running,startpoint=0,direction=left,steptime=50,repeat=5,startdelay=1500,always=0" position="439,676" render="RunningText" size="472,39" source="session.Event_Next" transparent="1">
+    <convert type="EventName">Name</convert>
+  </widget>
+  <widget backgroundColor="fenrisBackground2" font="Regular; 22" foregroundColor="fenrisAccent1" halign="right" position="913,678" render="Label" size="107,35" source="session.Event_Next" transparent="1" zPosition="1">
+    <convert type="EventTime">Duration</convert>
+    <convert type="ClockToText">InMinutes</convert>
+  </widget>
+  <eLabel backgroundColor="fenrisAccent1" foregroundColor="fenrisAccent1" name="new eLabel" position="273,620" size="742,1" />
+  <!-- EPG */ -->
+  <!--/* CHANNELNR/NAME  -->
+  <widget font="Regular; 100" foregroundColor="fenrisPreTrans" halign="center" noWrap="1" position="0,440" render="Label" size="257,150" source="session.CurrentService" text="2" transparent="1" valign="top" zPosition="-20">
+    <convert type="ExtendedServiceInfo">ServiceNumber</convert>
+  </widget>
+  <widget font="Regular; 100" foregroundColor="fenrisPreTrans" halign="left" noWrap="1" position="257,440" render="Label" size="1020,150" source="session.CurrentService" transparent="1" valign="top" zPosition="-20">
+    <convert type="ServiceName">Name</convert>
+  </widget>
+  <!-- CHANNELNR/NAME */-->
+  <widget backgroundColor="fenrisBackground" foregroundColor="fenrisAccent1" font="Regular; 20" halign="right" position="254,625" render="Label" size="60,35" source="session.Event_Now" transparent="1" valign="center" zPosition="1">
+    <convert type="FenrisEventTime">RunTime</convert>
+    <convert type="FenrisRemainingToText">InMinutes</convert>
+  </widget>
+  <eLabel backgroundColor="fenrisBackground" font="Regular; 21" foregroundColor="fenrisAccent1" halign="center" noWrap="1" position="315,626" size="20,35" text="/" transparent="1" valign="center" zPosition="1" />
+  <widget backgroundColor="fenrisBackground" foregroundColor="fenrisAccent1" font="Regular; 20" halign="left" position="334,625" render="Label" size="120,35" source="session.Event_Now" transparent="1" valign="center" zPosition="1">
+    <convert type="EventTime">Duration</convert>
+    <convert type="ClockToText">InMinutes</convert>
+  </widget>
+  <!-- Weather widget -->
+  <eLabel backgroundColor="fenrisBackground" name="WeatherBar" position="0,0" size="1280,95" zPosition="-10" />
+  <eLabel backgroundColor="fenrisBorder" position="0,93" size="1280,1" transparent="0" zPosition="-5" />
+  <widget source="session.CurrentService" render="Label" position="10,1" size="60,60" font="Meteo;48" zPosition="10" halign="center" valign="center" foregroundColor="fenrisAccent1" backgroundColor="fenrisBackground" transparent="1" noWrap="1">
+      <convert type="FenrisWeather">currentWeatherCode</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="72,21" size="70,26" font="Regular;24" zPosition="10" halign="right" valign="center" foregroundColor="fenrisAccent1" backgroundColor="fenrisBackground" transparent="1" noWrap="1">
+      <convert type="FenrisWeather">currentWeatherTemp</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="185,1" size="60,60" font="Meteo;48" zPosition="10" halign="center" valign="center" foregroundColor="fenrisAccent1" backgroundColor="fenrisBackground" transparent="1" noWrap="1">
+      <convert type="FenrisWeather">forecastTodayCode</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="185,60" size="60,27" font="Regular;24" zPosition="10" halign="center" valign="top" foregroundColor="fenrisAccent1" backgroundColor="fenrisBackground" transparent="1" noWrap="1">
+      <convert type="FenrisWeather">forecastTodayDay</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="247,60" size="110,27" font="Regular;24" zPosition="10" halign="left" valign="top" backgroundColor="fenrisBackground" transparent="1" noWrap="1" foregroundColor="fenrisAccent1">
+      <convert type="FenrisWeather">forecastTodayDate</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="247,6" size="60,26" font="Regular;24" zPosition="10" halign="right" valign="center" foregroundColor="fenrisAccent1" backgroundColor="fenrisBackground" transparent="1" noWrap="1">
+      <convert type="FenrisWeather">forecastTodayTempMax</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="247,32" size="60,25" font="Regular;24" zPosition="10" halign="right" valign="center" foregroundColor="fenrisAccent1" backgroundColor="fenrisBackground" transparent="1" noWrap="1">
+      <convert type="FenrisWeather">forecastTodayTempMin</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="412,1" size="60,60" font="Meteo;48" zPosition="10" halign="center" valign="center" foregroundColor="fenrisAccent1" backgroundColor="fenrisBackground" transparent="1" noWrap="1">
+      <convert type="FenrisWeather">forecastTomorrowCode</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="412,60" size="60,27" font="Regular;24" zPosition="10" halign="center" valign="top" backgroundColor="fenrisBackground" transparent="1" noWrap="1" foregroundColor="fenrisAccent1">
+      <convert type="FenrisWeather">forecastTomorrowDay</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="474,59" size="110,27" font="Regular;24" zPosition="10" halign="left" valign="top" foregroundColor="fenrisAccent1" backgroundColor="fenrisBackground" transparent="1" noWrap="1">
+      <convert type="FenrisWeather">forecastTomorrowDate</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="474,6" size="60,25" font="Regular;24" zPosition="10" halign="right" valign="center" foregroundColor="fenrisAccent1" backgroundColor="fenrisBackground" transparent="1" noWrap="1">
+      <convert type="FenrisWeather">forecastTomorrowTempMax</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="474,31" size="60,25" font="Regular;24" zPosition="10" halign="right" valign="center" foregroundColor="fenrisAccent1" backgroundColor="fenrisBackground" transparent="1" noWrap="1">
+      <convert type="FenrisWeather">forecastTomorrowTempMin</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="639,1" size="60,60" font="Meteo;48" zPosition="10" halign="center" valign="center" foregroundColor="fenrisAccent1" backgroundColor="fenrisBackground" transparent="1" noWrap="1">
+      <convert type="FenrisWeather">forecastTomorrow1Code</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="639,60" size="60,27" font="Regular;24" zPosition="10" halign="center" valign="top" foregroundColor="fenrisAccent1" backgroundColor="fenrisBackground" transparent="1" noWrap="1">
+      <convert type="FenrisWeather">forecastTomorrow1Day</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="701,60" size="110,27" font="Regular;24" zPosition="10" halign="left" valign="top" foregroundColor="fenrisAccent1" backgroundColor="fenrisBackground" transparent="1" noWrap="1">
+      <convert type="FenrisWeather">forecastTomorrow1Date</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="701,6" size="60,25" font="Regular;24" zPosition="10" halign="right" valign="center" foregroundColor="fenrisAccent1" backgroundColor="fenrisBackground" transparent="1" noWrap="1">
+      <convert type="FenrisWeather">forecastTomorrow1TempMax</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="701,31" size="60,25" font="Regular;24" zPosition="10" halign="right" valign="center" foregroundColor="fenrisAccent1" backgroundColor="fenrisBackground" transparent="1" noWrap="1">
+      <convert type="FenrisWeather">forecastTomorrow1TempMin</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="866,1" size="60,60" font="Meteo;48" zPosition="10" halign="center" valign="center" foregroundColor="fenrisAccent1" backgroundColor="fenrisBackground" transparent="1" noWrap="1">
+      <convert type="FenrisWeather">forecastTomorrow2Code</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="866,60" size="60,27" font="Regular;24" zPosition="10" halign="center" valign="top" foregroundColor="fenrisAccent1" backgroundColor="fenrisBackground" transparent="1" noWrap="1">
+      <convert type="FenrisWeather">forecastTomorrow2Day</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="928,60" size="110,27" font="Regular;24" zPosition="10" halign="left" valign="top" foregroundColor="fenrisAccent1" backgroundColor="fenrisBackground" transparent="1" noWrap="1">
+      <convert type="FenrisWeather">forecastTomorrow2Date</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="928,6" size="60,25" font="Regular;24" zPosition="10" halign="right" valign="center" foregroundColor="fenrisAccent1" backgroundColor="fenrisBackground" transparent="1" noWrap="1">
+      <convert type="FenrisWeather">forecastTomorrow2TempMax</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="928,31" size="60,25" font="Regular;24" zPosition="10" halign="right" valign="center" foregroundColor="fenrisAccent1" backgroundColor="fenrisBackground" transparent="1" noWrap="1">
+      <convert type="FenrisWeather">forecastTomorrow2TempMin</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="1093,1" size="60,60" font="Meteo;48" zPosition="10" halign="center" valign="center" foregroundColor="fenrisAccent1" backgroundColor="fenrisBackground" transparent="1" noWrap="1">
+      <convert type="FenrisWeather">forecastTomorrow3Code</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="1093,60" size="60,27" font="Regular;24" zPosition="10" halign="center" valign="top" foregroundColor="fenrisAccent1" backgroundColor="fenrisBackground" transparent="1" noWrap="1">
+      <convert type="FenrisWeather">forecastTomorrow3Day</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="1155,60" size="110,27" font="Regular;24" zPosition="10" halign="left" valign="top" foregroundColor="fenrisAccent1" backgroundColor="fenrisBackground" transparent="1" noWrap="1">
+      <convert type="FenrisWeather">forecastTomorrow3Date</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="1155,6" size="60,25" font="Regular;24" zPosition="10" halign="right" valign="center" foregroundColor="fenrisAccent1" backgroundColor="fenrisBackground" transparent="1" noWrap="1">
+      <convert type="FenrisWeather">forecastTomorrow3TempMax</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="1155,31" size="60,25" font="Regular;24" zPosition="10" halign="right" valign="center" backgroundColor="fenrisBackground" transparent="1" noWrap="1" foregroundColor="fenrisAccent1">
+      <convert type="FenrisWeather">forecastTomorrow3TempMin</convert>
+    </widget>
+    <eLabel backgroundColor="fenrisBackground" font="Regular;24" halign="center" position="10,60" size="120,27" text="NOW" transparent="1" zPosition="1" foregroundColor="fenrisAccent1" valign="top" />
+<!-- /* RECInfo  -->
+  <widget alphatest="blend" pixmap="FenrisHD/icons/ico_rec_on.png" position="980,630" render="Pixmap" size="40,23" source="session.RecordState" zPosition="4">
+    <convert type="ConditionalShowHide">Blink</convert>
+  </widget>
+  <!-- RECInfo */-->
+</screen>
+
+</skin>

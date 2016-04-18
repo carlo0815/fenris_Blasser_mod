@@ -1,0 +1,88 @@
+<skin>
+
+<!-- EMCSelection with small cover -->
+<screen name="EMCSelection" position="0,0" size="1280,720" title="Enhanced Movie Center" flags="wfNoBorder" backgroundColor="transparent">
+    <eLabel backgroundColor="fenrisBackground" position="0,0" size="1280,720" transparent="0" zPosition="-10" />
+    <eLabel backgroundColor="fenrisBorder" position="0,653" size="1280,5" transparent="0" zPosition="-5" />
+    <eLabel backgroundColor="fenrisBorder" position="0,65" size="1280,5" transparent="0" zPosition="-5" />
+    <eLabel backgroundColor="fenrisBackground" position="0,66" size="1280,3" transparent="0" zPosition="0" />
+    <eLabel backgroundColor="fenrisBackground" position="0,654" size="1280,3" transparent="0" zPosition="0" />
+    <eLabel backgroundColor="fenrisBorder" position="1279,0" size="1,720" transparent="0" zPosition="-5" />
+    <eLabel backgroundColor="fenrisBorder" position="1,0" size="1,720" transparent="0" zPosition="-5" />
+    <eLabel backgroundColor="fenrisBorder" position="0,653" size="1280,5" transparent="0" zPosition="-5" />
+    <eLabel backgroundColor="fenrisBorder" position="0,65" size="1280,5" transparent="0" zPosition="-5" />
+    <eLabel backgroundColor="fenrisBorder" position="798,69" size="1,585" transparent="0" zPosition="-5" />
+    <eLabel backgroundColor="fenrisBorder" position="27,653" size="1223,5" transparent="0" zPosition="-5" />
+    <eLabel backgroundColor="fenrisBorder" position="27,65" size="1223,5" transparent="0" zPosition="-5" />
+    <eLabel backgroundColor="fenrisBackground" position="27,66" size="1224,3" transparent="0" zPosition="0" />
+    <eLabel backgroundColor="fenrisBackground" position="27,654" size="1224,3" transparent="0" zPosition="0" />
+    <eLabel backgroundColor="fenrisBackground" font="RegularLight; 26" foregroundColor="fenrisAccent1" halign="center" position="30,12" shadowColor="#000000" size="350,45" text="Enhanced Movie Center" transparent="1" />
+    <widget name="wait" position="0,305" size="1280,50" zPosition="1" font="Regular;32" foregroundColor="fenrisSelection" backgroundColor="fenrisBackground" halign="center" valign="center" />
+    <!-- /*Uhr-->
+    <widget backgroundColor="fenrisBackground" font="Regular; 43" halign="center" position="1040,-5" render="Label" size="65,80" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+      <convert type="ClockToText">Format:%H</convert>
+    </widget>
+    <eLabel backgroundColor="fenrisBackground" font="Regular; 43" halign="center" position="1097,-5" size="15,80" text=":" transparent="1" valign="center" zPosition="1" />
+    <widget backgroundColor="fenrisBackground" font="Regular; 43" halign="center" position="1107,-5" render="Label" size="65,80" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+      <convert type="ClockToText">Format:%M</convert>
+    </widget>
+    <eLabel backgroundColor="fenrisBackground" font="Regular; 32" halign="center" position="1163,9" size="15,60" text=":" transparent="1" valign="center" zPosition="1" />
+    <widget backgroundColor="fenrisBackground" font="Regular; 32" halign="center" position="1173,9" render="Label" size="50,60" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+      <convert type="ClockToText">Format:%S</convert>
+    </widget>
+    <widget backgroundColor="fenrisBackground" font="Regular; 18" foregroundColor="fenrisAccent1" halign="right" position="886,35" render="Label" size="148,29" source="global.CurrentTime" transparent="1">
+      <convert type="ClockToText">Format:%e. %B</convert>
+    </widget>
+    <widget backgroundColor="fenrisBackground" font="Regular; 18" foregroundColor="fenrisAccent1" halign="right" position="909,15" render="Label" size="125,30" source="global.CurrentTime" transparent="1">
+      <convert type="ClockToText">Format:%A</convert>
+    </widget>
+    <!--Uhr */-->
+    <widget source="Title" render="Label" position="37,18" size="755,30" font="Regular; 22" foregroundColor="fenrisAccent1" backgroundColor="fenrisBackground" transparent="1" halign="right" />
+    <!-- Cover Mini Tv -->
+    <widget name="Cover" position="955,80" size="160,225" zPosition="5" alphatest="blend" />
+    <widget name="list" position="50,110" size="740,532" itemHeight="28" CoolFont="Regular;20" CoolSelectFont="Regular;20" CoolDateFont="Regular;20" CoolMoviePos="35" CoolMovieSize="545" CoolFolderSize="545" CoolTitleColor="0" CoolDatePos="1000" CoolDateWidth="122" CoolDateColor="0" CoolHighlightColor="0" CoolProgressPos="1000" CoolBarPos="590" CoolBarHPos="8" CoolBarSize="55,10" CoolBarSizeSa="110,16" DefaultColor="fenrisAccent1" UnwatchedColor="fenrisAccent1" WatchingColor="fenrisBlue" FinishedColor="fenrisGreen" RecordingColor="red" BackColorSel="fenrisSelection" foregroundColorSelected="fenrisForeground" backgroundColor="fenrisBackground" scrollbarMode="showOnDemand" transparent="1" />
+    <widget source="Service" render="Label" position="810,310" size="200,24" font="Regular;19" foregroundColor="fenrisForeground" halign="left" backgroundColor="fenrisBackground" transparent="1">
+      <convert type="EMCMovieInfo">RecordServiceName</convert>
+    </widget>
+    <widget source="Service" render="Label" position="50,75" size="740,35" font="Regular;24" foregroundColor="fenrisForeground" backgroundColor="fenrisBackground" halign="center" transparent="1">
+      <convert type="EMCEventName">Name</convert>
+    </widget>
+    <widget source="Service" render="Label" position="810,345" size="70,24" font="Regular;20" halign="left" foregroundColor="fenrisForeground" backgroundColor="fenrisBackground" transparent="1">
+      <convert type="EMCServiceTime">StartTime</convert>
+      <convert type="EMCClockToText">Format:%H:%M</convert>
+    </widget>
+    <widget source="Service" render="Label" position="870,345" size="70,24" font="Regular;20" foregroundColor="fenrisForeground" backgroundColor="fenrisBackground" transparent="1">
+      <convert type="EMCServiceTime">EndTime</convert>
+      <convert type="EMCClockToText">Format:- %H:%M</convert>
+    </widget>
+    <widget source="Service" render="Label" position="985,345" size="120,24" font="Regular;20" halign="left" foregroundColor="fenrisForeground" backgroundColor="fenrisBackground" transparent="1">
+      <convert type="EMCServiceTime">Duration</convert>
+      <convert type="EMCClockToText">Format:%Hh:%Mmin</convert>
+    </widget>
+    <widget source="Service" render="Label" position="1035,345" size="200,24" font="Regular;20" foregroundColor="fenrisForeground" halign="right" backgroundColor="fenrisBackground" transparent="1">
+      <convert type="EMCMovieInfo">FileSize</convert>
+    </widget>
+    <widget source="Service" render="Label" position="935,310" size="300,24" font="Regular;19" foregroundColor="fenrisForeground" halign="right" backgroundColor="fenrisBackground" transparent="1">
+      <convert type="EMCServiceTime">StartTime</convert>
+      <convert type="EMCClockToText">Date</convert>
+    </widget>
+    <widget source="Service" render="Label" position="810,370" size="460,22" font="Regular; 19" zPosition="2" foregroundColor="fenrisForeground" backgroundColor="fenrisBackground" transparent="1" halign="center">
+      <convert type="EMCMovieInfo">ShortDescription</convert>
+    </widget>
+    <widget source="Service" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=125,repeat=5,always=0,startdelay=10000,wrap" position="810,395" size="460,243" font="Regular;19" foregroundColor="fenrisAccent1" backgroundColor="fenrisBackground" transparent="1" halign="left" valign="top">
+      <convert type="EMCEventName">ExtendedDescription</convert>
+    </widget>
+    <!-- /*Buttons-->
+    <ePixmap name="new ePixmap" pixmap="FenrisHD/buttons/key_menu.png" position="1130,675" size="49,24" />
+    <ePixmap alphatest="blend" pixmap="FenrisHD/buttons/key_red.png" position="80,670" size="30,40" />
+    <ePixmap alphatest="blend" pixmap="FenrisHD/buttons/key_green.png" position="320,670" size="30,40" />
+    <ePixmap alphatest="blend" pixmap="FenrisHD/buttons/key_yellow.png" position="560,670" size="30,40" />
+    <ePixmap alphatest="blend" pixmap="FenrisHD/buttons/key_blue.png" position="810,670" size="30,40" />
+    <widget backgroundColor="fenrisBackground" font="Regular; 20" halign="left" render="Label" source="key_red" position="120,675" size="210,24" transparent="1" zPosition="1" />
+    <widget backgroundColor="fenrisBackground" font="Regular; 20" halign="left" render="Label" source="key_green" position="360,675" size="210,24" transparent="1" zPosition="1" />
+    <widget backgroundColor="fenrisBackground" font="Regular; 20" halign="left" render="Label" source="key_yellow" position="600,675" size="210,24" transparent="1" zPosition="1" />
+    <widget backgroundColor="fenrisBackground" font="Regular; 20" halign="left" render="Label" source="key_blue" position="850,675" size="210,24" transparent="1" zPosition="1" />
+    <!--Buttons */-->
+  </screen>
+  
+  </skin>

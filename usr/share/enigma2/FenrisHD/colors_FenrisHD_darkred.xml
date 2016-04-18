@@ -1,0 +1,121 @@
+<skin>
+
+  <colors>
+    <color name="background" value="#30000000" />
+    <color name="black" value="#00000000" />
+    <color name="blue" value="#000064c7" />
+    <color name="dark" value="#00294a6b" />
+    <color name="darkgrey" value="#00999999" />
+    <color name="fenrisAccent1" value="#00bbbbbb" />
+    <color name="fenrisAccent2" value="#00999999" />
+    <color name="fenrisBackground" value="#30000000" />
+    <color name="fenrisBackground2" value="#30111111" />
+    <color name="fenrisBar" value="#008d0802" />
+    <color name="fenrisBlue" value="#001677d2" />
+    <color name="fenrisBorder" value="#00ffffff" />
+    <color name="fenrisCyan" value="#00149baf" />
+    <color name="fenrisDeepGrey" value="#00222222" />
+    <color name="fenrisForeground" value="#00ffffff" />
+    <color name="fenrisGreen" value="#0070ad11" />
+    <color name="fenrisOrange" value="#00c3461b" />
+    <color name="fenrisPink" value="#00a61d4d" />
+    <color name="fenrisPreBlack2" value="#40000000" />
+    <color name="fenrisPreTrans" value="#ccffffff" />
+    <color name="fenrisPreTrans2" value="#e6ffffff" />
+    <color name="fenrisPurple" value="#006c0aab" />
+    <color name="fenrisRed" value="#00911d10" />
+    <color name="fenrisSelection" value="#208d0802" />
+    <color name="fenrisSelectionCool" value="#00444444" />
+    <color name="fenrisTextCHNRIB" value="#90ffffff" />
+    <color name="fenrisTextDatum" value="#00bbbbbb" />
+    <color name="fenrisTextEPG1" value="#00ffffff" />
+    <color name="fenrisTextEPG2" value="#00bbbbbb" />
+    <color name="fenrisTextUhr" value="#00ffffff" />
+    <color name="fenrisYellow" value="#00bf9217" />
+    <color name="foreground" value="#00ffffff" />
+    <color name="green" value="#00389416" />
+    <color name="grey" value="#00bbbbbb" />
+    <color name="orange" value="#00f47d19" />
+    <color name="picture" value="#ff000000" />
+    <color name="rds_text_bg" value="#00003258" />
+    <color name="red" value="#00f23d21" />
+    <color name="rssviewtop" value="#45005050" />
+    <color name="transparent" value="#ff000000" />
+    <color name="transpBlack" value="#80000000" />
+    <color name="transpWhite" value="#77ffffff" />
+    <color name="transpyellow" value="#33bab329" />
+    <color name="un18080911" value="#18080911" />
+    <color name="un1c202b" value="#001c202b" />
+    <color name="un1e28b6" value="#001e28b6" />
+    <color name="un1f771f" value="#001f771f" />
+    <color name="un20343c4f" value="#20343c4f" />
+    <color name="un240e1014" value="#240e1014" />
+    <color name="un44000000" value="#44000000" />
+    <color name="un444444" value="#00444444" />
+    <color name="un555555" value="#00555555" />
+    <color name="un5678a4" value="#005678a4" />
+    <color name="un56c856" value="#0056c856" />
+    <color name="un5b00" value="#00005b00" />
+    <color name="un605f5e" value="#00605f5e" />
+    <color name="un666666" value="#00666666" />
+    <color name="un7300" value="#00007300" />
+    <color name="un800000" value="#00800000" />
+    <color name="un808888" value="#00808888" />
+    <color name="un888a8a8a" value="#888a8a8a" />
+    <color name="un9f1313" value="#009f1313" />
+    <color name="una08500" value="#00a08500" />
+    <color name="unb59e01" value="#00b59e01" />
+    <color name="unbab329" value="#00bab329" />
+    <color name="und3d3d3" value="#00d3d3d3" />
+    <color name="undcaaaa" value="#00dcaaaa" />
+    <color name="undcdcdc" value="#00dcdcdc" />
+    <color name="undddddd" value="#00dddddd" />
+    <color name="unf0b400" value="#00f0b400" />
+    <color name="unff000000" value="#ff000000" />
+    <color name="unfff000" value="#00fff000" />
+    <color name="white" value="#00ffffff" />
+    <color name="yellow" value="#00e5b243" />
+  </colors>
+  
+  <windowstyle id="0" type="skinned">
+    <title font="Regular;24" offset="20,5" />
+    <color color="background" name="Background" />
+    <color color="foreground" name="LabelForeground" />
+    <color color="background" name="ListboxBackground" />
+    <color color="foreground" name="ListboxForeground" />
+    <color color="fenrisSelection" name="ListboxSelectedBackground" />
+    <color color="foreground" name="ListboxSelectedForeground" />
+    <color color="fenrisGreen" name="ListboxMarkedBackground" />
+    <color color="foreground" name="ListboxMarkedForeground" />
+    <color color="fenrisBlue" name="ListboxMarkedAndSelectedBackground" />
+    <color color="foreground" name="ListboxMarkedAndSelectedForeground" />
+    <color color="foreground" name="WindowTitleForeground" />
+    <color color="background" name="WindowTitleBackground" />
+    <borderset name="bsWindow">
+      <pixmap filename="FenrisHD/window/bs_tl.png" pos="bpTopLeft" />
+      <pixmap filename="FenrisHD/window/bs_t.png" pos="bpTop" />
+      <pixmap filename="FenrisHD/window/bs_tr.png" pos="bpTopRight" />
+      <pixmap filename="FenrisHD/window/bs_l.png" pos="bpLeft" />
+      <pixmap filename="FenrisHD/window/bs_r.png" pos="bpRight" />
+      <pixmap filename="FenrisHD/window/bs_bl.png" pos="bpBottomLeft" />
+      <pixmap filename="FenrisHD/window/bs_b.png" pos="bpBottom" />
+      <pixmap filename="FenrisHD/window/bs_br.png" pos="bpBottomRight" />
+    </borderset>
+  </windowstyle>
+  <windowstyle id="1" type="skinned">
+    <title font="Regular;24" offset="20,5" />
+    <color color="background" name="Background" />
+    <color color="foreground" name="LabelForeground" />
+    <color color="background" name="ListboxBackground" />
+    <color color="fenrisAccent1" name="ListboxForeground" />
+    <color color="fenrisSelection" name="ListboxSelectedBackground" />
+    <color color="foreground" name="ListboxSelectedForeground" />
+    <color color="fenrisBlue" name="ListboxMarkedBackground" />
+    <color color="foreground" name="ListboxMarkedForeground" />
+    <color color="fenrisBlue" name="ListboxMarkedAndSelectedBackground" />
+    <color color="foreground" name="ListboxMarkedAndSelectedForeground" />
+    <color color="foreground" name="WindowTitleForeground" />
+    <color color="background" name="WindowTitleBackground" />
+  </windowstyle>
+  
+ </skin>
