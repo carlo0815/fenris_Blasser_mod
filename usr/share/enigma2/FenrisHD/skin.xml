@@ -1227,16 +1227,28 @@
       <convert type="EventName">ExtendedDescription</convert>
     </widget>
     <!-- /*Buttons-->
-    <ePixmap name="new ePixmap" pixmap="FenrisHD/buttons/key_epg.png" position="1140,675" size="49,24" transparent="0" />
-    <ePixmap name="new ePixmap" pixmap="FenrisHD/buttons/key_menu.png" position="1070,675" size="49,24" />
-    <ePixmap alphatest="blend" pixmap="FenrisHD/buttons/key_red.png" position="80,670" size="30,40" />
-    <ePixmap alphatest="blend" pixmap="FenrisHD/buttons/key_green.png" position="255,670" size="30,40" />
-    <ePixmap alphatest="blend" pixmap="FenrisHD/buttons/key_yellow.png" position="430,670" size="30,40" />
-    <ePixmap alphatest="blend" pixmap="FenrisHD/buttons/key_blue.png" position="605,670" size="30,40" />
-    <widget backgroundColor="fenrisBackground" font="Regular; 20" halign="left" name="key_red" position="118,675" size="130,24" transparent="1" zPosition="1" />
-    <widget backgroundColor="fenrisBackground" font="Regular; 20" halign="left" name="key_green" position="293,675" size="130,24" transparent="1" zPosition="1" />
-    <widget backgroundColor="fenrisBackground" font="Regular; 20" halign="left" name="key_yellow" position="468,675" size="130,24" transparent="1" zPosition="1" />
-    <widget backgroundColor="fenrisBackground" font="Regular; 20" halign="left" name="key_blue" position="643,675" size="130,24" transparent="1" zPosition="1" />
+    <ePixmap name="new ePixmap" pixmap="FenrisHD/buttons/key_epg.png" position="1220,675" size="49,24" transparent="0" />
+    <ePixmap name="new ePixmap" pixmap="FenrisHD/buttons/key_menu.png" position="1170,675" size="49,24" />
+    <ePixmap alphatest="blend" pixmap="FenrisHD/buttons/key_red.png" position="20,670" size="30,40" />
+    <ePixmap alphatest="blend" pixmap="FenrisHD/buttons/key_green.png" position="185,670" size="30,40" />
+    <ePixmap alphatest="blend" pixmap="FenrisHD/buttons/key_yellow.png" position="350,670" size="30,40" />
+    <ePixmap alphatest="blend" pixmap="FenrisHD/buttons/key_blue.png" position="515,670" size="30,40" />
+    <ePixmap alphatest="blend" pixmap="FenrisHD/skin_default/icons/ico_mp_play.png" position="682,679" size="30,40" />
+    <ePixmap alphatest="blend" pixmap="FenrisHD/skin_default/icons/ico_mp_forward.png" position="1003,679" size="30,40" />
+    <ePixmap alphatest="blend" pixmap="FenrisHD/skin_default/icons/ico_mp_rewind.png" position="843,679" size="30,40" />
+    <widget backgroundColor="fenrisBackground" font="Regular; 20" halign="left" name="key_red" position="53,675" size="130,24" transparent="1" zPosition="1" />
+    <widget backgroundColor="fenrisBackground" font="Regular; 20" halign="left" name="key_green" position="219,675" size="130,24" transparent="1" zPosition="1" />
+    <widget backgroundColor="fenrisBackground" font="Regular; 20" halign="left" name="key_yellow" position="383,675" size="130,24" transparent="1" zPosition="1" />
+    <widget backgroundColor="fenrisBackground" font="Regular; 20" halign="left" name="key_blue" position="547,675" size="130,24" transparent="1" zPosition="1" />
+    <widget source="ServiceEvent" render="Label" position="700,675" size="135,24" noWrap="1" font="RegularLight;23" foregroundColor="fenrisAccent1" backgroundColor="fenrisBackground" transparent="1">
+      <convert type="NFRFunktion">Plugins</convert>
+    </widget>
+    <widget source="ServiceEvent" render="Label" position="1025,675" size="135,24" noWrap="1" font="RegularLight;23" foregroundColor="fenrisAccent1" backgroundColor="fenrisBackground" transparent="1">
+  <convert type="NFRFunktion">Plugins1</convert>
+</widget>
+    <widget source="ServiceEvent" render="Label" position="863,674" size="135,24" noWrap="1" font="RegularLight;23" foregroundColor="fenrisAccent1" backgroundColor="fenrisBackground" transparent="1">
+  <convert type="NFRFunktion">Plugins2</convert>
+</widget>
     <!--Buttons */-->
     <!-- /*picon-->
     <widget source="ServiceEvent" render="Picon" position="295,75" size="100,60" zPosition="2" transparent="1" alphatest="blend">
@@ -5100,19 +5112,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))</app
     </widget>
     <widget name="thumbnail" position="0,0" size="100,75" alphatest="blend" />
     # fake entry for dynamic thumbnail resizing,currently there is no other way doing this.
-    <widget name="HelpWindow" position="135,500" size="1,1" zPosition="10" transparent="1" alphatest="blend" />
-    <ePixmap pixmap="FenrisHD/buttons/key_red.png" position="52,645" size="30,40" alphatest="blend" />
-    <ePixmap pixmap="FenrisHD/buttons/key_green.png" position="290,645" size="30,40" alphatest="blend" />
-    <ePixmap pixmap="FenrisHD/buttons/key_yellow.png" position="530,645" size="30,40" alphatest="blend" />
-    <ePixmap pixmap="FenrisHD/buttons/key_blue.png" position="771,645" size="30,40" alphatest="blend" />
-    <widget name="key_red" position="93,650" size="180,25" zPosition="1" font="Regular;22" halign="left" backgroundColor="fenrisBackground" transparent="1" />
-    <widget name="key_green" position="330,650" size="180,25" zPosition="1" font="Regular;22" halign="left" backgroundColor="fenrisBackground" transparent="1" />
-    <widget name="key_yellow" position="570,650" size="180,25" zPosition="1" font="Regular;22" halign="left" backgroundColor="fenrisBackground" transparent="1" />
-    <eLabel text="Virtual KeyBoard" position="810,650" size="270,25" zPosition="1" font="Regular;22" halign="left" backgroundColor="fenrisBackground" transparent="1" />
-    <ePixmap position="1106,650" size="49,24" zPosition="10" pixmap="FenrisHD/buttons/key_menu.png" transparent="1" alphatest="blend" />
-    <ePixmap position="950,180" size="256,256" zPosition="2" pixmap="FenrisHD/icons/youtube.png" transparent="1" alphatest="blend" />
-    <widget name="KeyIcon" position="0,0" size="0,0" />
-  </screen>
+    <widget name="HelpWindow" position="135,500" size="1,1" zPosition="10" transparent="1" alphatest="blend" /><ePixmap pixmap="FenrisHD/buttons/key_red.png" position="52,645" size="30,40" alphatest="blend" /><ePixmap pixmap="FenrisHD/buttons/key_green.png" position="290,645" size="30,40" alphatest="blend" /><ePixmap pixmap="FenrisHD/buttons/key_yellow.png" position="530,645" size="30,40" alphatest="blend" /><ePixmap pixmap="FenrisHD/buttons/key_blue.png" position="771,645" size="30,40" alphatest="blend" /><widget name="key_red" position="93,650" size="180,25" zPosition="1" font="Regular;22" halign="left" backgroundColor="fenrisBackground" transparent="1" /><widget name="key_green" position="330,650" size="180,25" zPosition="1" font="Regular;22" halign="left" backgroundColor="fenrisBackground" transparent="1" /><widget name="key_yellow" position="570,650" size="180,25" zPosition="1" font="Regular;22" halign="left" backgroundColor="fenrisBackground" transparent="1" /><eLabel text="Virtual KeyBoard" position="810,650" size="270,25" zPosition="1" font="Regular;22" halign="left" backgroundColor="fenrisBackground" transparent="1" /><ePixmap position="1106,650" size="49,24" zPosition="10" pixmap="FenrisHD/buttons/key_menu.png" transparent="1" alphatest="blend" /><ePixmap position="950,180" size="256,256" zPosition="2" pixmap="FenrisHD/icons/youtube.png" transparent="1" alphatest="blend" /><widget name="KeyIcon" position="0,0" size="0,0" /></screen>
   <screen name="MyTubeSettingsScreen" position="0,0" size="1280,720" title="MyTubeSettingsScreen" flags="wfNoBorder" backgroundColor="transparent">
     <eLabel backgroundColor="fenrisBackground" position="40,35" size="1205,650" zPosition="-10" />
     <eLabel backgroundColor="fenrisBorder" position="1244,33" size="3,653" transparent="0" zPosition="-5" />
@@ -5264,8 +5264,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))</app
     <widget name="key_red" position="92,650" size="240,24" zPosition="1" font="Regular;20" halign="left" backgroundColor="fenrisBackground" transparent="1" />
     <widget name="thumbnail" position="0,0" size="170,130" alphatest="blend" />
     # fake entry for dynamic thumbnail resizing, currently there is no other way doing this.
-    <ePixmap position="950,180" size="256,256" zPosition="2" pixmap="FenrisHD/icons/youtube.png" transparent="1" alphatest="blend" />
-  </screen>
+    <ePixmap position="950,180" size="256,256" zPosition="2" pixmap="FenrisHD/icons/youtube.png" transparent="1" alphatest="blend" /></screen>
   <screen backgroundColor="transparent" flags="wfNoBorder" name="AutoMountEdit" position="0,0" size="1280,720" title="MountEdit">
     <eLabel backgroundColor="fenrisBackground" position="40,35" size="1205,650" zPosition="-10" />
     <eLabel backgroundColor="fenrisBorder" position="1244,33" size="3,653" transparent="0" zPosition="-5" />
@@ -10133,4 +10132,3 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))</app
     <!--Buttons */-->
   </screen>
 </skin>
-
