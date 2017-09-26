@@ -9390,11 +9390,13 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))</app
     <widget name="text1" backgroundColor="fenrisBackground" font="RegularLight;22" halign="center" valign="center" position="70,581" size="715,50" transparent="1" />
     <ePixmap alphatest="blend" pixmap="FenrisHD/icons/setup.png" position="950,180" size="256,256" transparent="1" zPosition="2" />
     <ePixmap alphatest="blend" pixmap="FenrisHD/buttons/key_red.png" position=" 70,635" size="30,40" />
-    <ePixmap alphatest="blend" pixmap="FenrisHD/buttons/key_green.png" position="360,635" size="30,40" />
-    <ePixmap alphatest="blend" pixmap="FenrisHD/buttons/key_yellow.png" position="650,635" size="30,40" />
+    <ePixmap alphatest="blend" pixmap="FenrisHD/buttons/key_green.png" position="350,635" size="30,40" />
+    <ePixmap alphatest="blend" pixmap="FenrisHD/buttons/key_yellow.png" position="630,635" size="30,40" />
+    <ePixmap alphatest="blend" pixmap="FenrisHD/buttons/key_blue.png" position="910,635" size="30,40" />
     <widget name="key_red" backgroundColor="fenrisBackground" font="RegularLight;20" halign="left" position="105,640" size="240,24" transparent="1" zPosition="1" />
-    <widget name="key_green" backgroundColor="fenrisBackground" font="RegularLight;20" halign="left" position="395,640" size="240,24" transparent="1" zPosition="1" />
-    <widget name="key_yellow" backgroundColor="fenrisBackground" font="RegularLight;20" halign="left" position="687,640" size="240,24" transparent="1" zPosition="1" />
+    <widget name="key_green" backgroundColor="fenrisBackground" font="RegularLight;20" halign="left" position="385,640" size="240,24" transparent="1" zPosition="1" />
+    <widget name="key_yellow" backgroundColor="fenrisBackground" font="RegularLight;20" halign="left" position="665,640" size="240,24" transparent="1" zPosition="1" />
+    <widget name="key_blue" backgroundColor="fenrisBackground" font="RegularLight;20" halign="left" position="945,640" size="240,24" transparent="1" zPosition="1" />
   </screen>
   <!-- QuickMenu Devices -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="QuickMenuDevices" position="0,0" size="1280,720" title="Devices">
