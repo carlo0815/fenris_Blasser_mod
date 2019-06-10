@@ -1244,11 +1244,11 @@
       <convert type="NFRFunktion">Plugins</convert>
     </widget>
     <widget source="ServiceEvent" render="Label" position="1025,675" size="135,24" noWrap="1" font="RegularLight;23" foregroundColor="fenrisAccent1" backgroundColor="fenrisBackground" transparent="1">
-  <convert type="NFRFunktion">Plugins1</convert>
-</widget>
+      <convert type="NFRFunktion">Plugins1</convert>
+    </widget>
     <widget source="ServiceEvent" render="Label" position="863,674" size="135,24" noWrap="1" font="RegularLight;23" foregroundColor="fenrisAccent1" backgroundColor="fenrisBackground" transparent="1">
-  <convert type="NFRFunktion">Plugins2</convert>
-</widget>
+      <convert type="NFRFunktion">Plugins2</convert>
+    </widget>
     <!--Buttons */-->
     <!-- /*picon-->
     <widget source="ServiceEvent" render="Picon" position="295,75" size="100,60" zPosition="2" transparent="1" alphatest="blend">
@@ -6656,31 +6656,28 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))</app
     <widget backgroundColor="fenrisBackground" font="Regular; 20" halign="left" name="key_green" position="360,640" size="210,24" transparent="1" zPosition="1" />
   </screen>
   <screen backgroundColor="transparent" flags="wfNoBorder" name="ImageBackup" position="0,0" size="1280,720" title="Image Backup">
-    <eLabel backgroundColor="fenrisBackground" position="40,35" size="1205,650" zPosition="-10" />
-    <eLabel backgroundColor="fenrisBorder" position="1244,33" size="3,653" transparent="0" zPosition="-5" />
-    <eLabel backgroundColor="fenrisBorder" position="38,33" size="3,653" transparent="0" zPosition="-5" />
-    <eLabel backgroundColor="fenrisBorder" position="40,683" size="1205,3" transparent="0" zPosition="-5" />
-    <eLabel backgroundColor="fenrisBorder" position="40,33" size="1205,3" transparent="0" zPosition="-5" />
-    <eLabel backgroundColor="fenrisBackground" position="1245,33" size="2,652" transparent="0" zPosition="0" />
-    <eLabel backgroundColor="fenrisBackground" position="38,33" size="1208,2" transparent="0" zPosition="0" />
-    <eLabel backgroundColor="fenrisBackground" position="39,684" size="1208,2" transparent="0" zPosition="0" />
-    <eLabel backgroundColor="fenrisBackground" position="38,33" size="2,653" transparent="0" zPosition="0" />
-    <widget source="Title" render="Label" backgroundColor="fenrisBackground" font="RegularLight;35" position="70,47" size="800,43" transparent="1" />
-    <widget name="info-hdd" position="70,140" zPosition="1" size="715,100" font="Regular;20" halign="center" valign="top" backgroundColor="fenrisBackground" transparent="1" />
-    <widget name="info-usb" position="70,275" zPosition="1" size="715,200" font="Regular;20" halign="center" valign="top" backgroundColor="fenrisBackground" transparent="1" />
-    <widget name="info-multi" position="70,505" zPosition="1" size="715,100" font="Regular;20" halign="center" valign="top" backgroundColor="fenrisBackground" transparent="1" />
-    <ePixmap alphatest="blend" pixmap="FenrisHD/icons/swm.png" position="950,180" size="256,256" transparent="1" zPosition="2" />
-    <!-- /*Buttons-->
-    <ePixmap alphatest="blend" pixmap="FenrisHD/buttons/key_red.png" position="80,635" size="30,40" />
-    <ePixmap alphatest="blend" pixmap="FenrisHD/buttons/key_green.png" position="320,635" size="30,40" />
-    <ePixmap alphatest="blend" pixmap="FenrisHD/buttons/key_yellow.png" position="560,635" size="30,40" />
-    <ePixmap alphatest="blend" pixmap="FenrisHD/buttons/key_blue.png" position="800,635" size="30,40" />
-    <widget backgroundColor="fenrisBackground" font="Regular; 20" halign="left" name="key_red" position="120,640" size="210,24" transparent="1" zPosition="1" />
-    <widget backgroundColor="fenrisBackground" font="Regular; 20" halign="left" name="key_green" position="360,640" size="210,24" transparent="1" zPosition="1" />
-    <widget backgroundColor="fenrisBackground" font="Regular; 20" halign="left" name="key_yellow" position="600,640" size="210,24" transparent="1" zPosition="1" />
-    <widget backgroundColor="fenrisBackground" font="Regular; 20" halign="left" name="key_blue" position="840,640" size="210,24" transparent="1" zPosition="1" />
-    <!--Buttons */-->
-  </screen>
+  <eLabel backgroundColor="fenrisBackground" position="40,35" size="1205,650" zPosition="-10" />
+  <eLabel backgroundColor="fenrisBorder" position="1244,33" size="3,653" transparent="0" zPosition="-5" />
+  <eLabel backgroundColor="fenrisBorder" position="38,33" size="3,653" transparent="0" zPosition="-5" />
+  <eLabel backgroundColor="fenrisBorder" position="40,683" size="1205,3" transparent="0" zPosition="-5" />
+  <eLabel backgroundColor="fenrisBorder" position="40,33" size="1205,3" transparent="0" zPosition="-5" />
+  <eLabel backgroundColor="fenrisBackground" position="1245,33" size="2,652" transparent="0" zPosition="0" />
+  <eLabel backgroundColor="fenrisBackground" position="38,33" size="1208,2" transparent="0" zPosition="0" />
+  <eLabel backgroundColor="fenrisBackground" position="39,684" size="1208,2" transparent="0" zPosition="0" />
+  <eLabel backgroundColor="fenrisBackground" position="38,33" size="2,653" transparent="0" zPosition="0" />
+  <widget source="Title" render="Label" backgroundColor="fenrisBackground" font="RegularLight;35" position="70,47" size="800,43" transparent="1" />
+  <widget source="options" render="Label" position="69,101" zPosition="1" size="720,450" font="Regular;20" halign="left" valign="top" transparent="1" />
+  <widget source="description" render="Label" position="72,443" zPosition="2" size="717,182" font="Regular;20" halign="left" valign="top" transparent="1" />
+  <widget name="config" render="Label" position="67,101" zPosition="1" size="720,450" font="Regular;20" halign="left" valign="top" scrollbarMode="showOnDemand" transparent="1" />
+  <ePixmap alphatest="blend" pixmap="FenrisHD/icons/swm.png" position="890,229" size="256,256" transparent="1" zPosition="0" />
+  <!-- /*Buttons-->
+  <ePixmap alphatest="blend" pixmap="FenrisHD/buttons/key_red.png" position="80,635" size="30,40" />
+  <ePixmap alphatest="blend" pixmap="FenrisHD/buttons/key_green.png" position="320,635" size="30,40" />
+  
+  <widget backgroundColor="fenrisBackground" font="Regular; 20" halign="left" source="key_red" render="Label" position="120,640" size="210,24" transparent="1" zPosition="1" />
+  <widget backgroundColor="fenrisBackground" font="Regular; 20" halign="left" source="key_green" render="Label" position="360,640" size="210,24" transparent="1" zPosition="1" />
+  <!--Buttons */-->
+</screen>
   <screen backgroundColor="transparent" flags="wfNoBorder" name="doFlashImage" position="0,0" size="1280,720" title="Flash On the fly (select a image)">
     <eLabel backgroundColor="fenrisBackground" position="40,35" size="1205,650" zPosition="-10" />
     <eLabel backgroundColor="fenrisBorder" position="1244,33" size="3,653" transparent="0" zPosition="-5" />
@@ -6716,8 +6713,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))</app
     <eLabel backgroundColor="fenrisBackground" position="39,684" size="1208,2" transparent="0" zPosition="0" />
     <eLabel backgroundColor="fenrisBackground" position="38,33" size="2,653" transparent="0" zPosition="0" />
     <widget source="Title" render="Label" backgroundColor="fenrisBackground" font="RegularLight;35" position="70,47" size="800,43" transparent="1" />
-    <widget name="info-online" position="65,115" zPosition="1" size="715,200" font="Regular;20" halign="left" valign="top" backgroundColor="fenrisBackground" transparent="1" />
-    <widget name="info-local" position="65,350" zPosition="1" size="715,200" font="Regular;20" halign="left" valign="top" backgroundColor="fenrisBackground" transparent="1" />
+    <widget name="list" position="70,125" zPosition="2" size="720,420" font="RegularLight;20" halign="left" valign="top" transparent="1" />
+    <widget name="description" position="73,330" zPosition="1" size="475,290" font="RegularLight;20" halign="left" valign="top" transparent="1" />
     <ePixmap alphatest="blend" pixmap="FenrisHD/icons/infopanel.png" position="950,180" size="256,256" transparent="1" zPosition="2" />
     <!-- /*Buttons-->
     <ePixmap alphatest="blend" pixmap="FenrisHD/buttons/key_red.png" position="80,635" size="30,40" />
@@ -10132,5 +10129,53 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))</app
     <widget backgroundColor="fenrisBackground" font="Regular; 20" halign="left" source="key_yellow" render="Label" position="600,640" size="210,24" transparent="1" zPosition="1" />
     <widget backgroundColor="fenrisBackground" font="Regular; 20" halign="left" source="key_blue" render="Label" position="840,640" size="210,24" transparent="1" zPosition="1" />
     <!--Buttons */-->
+  </screen>
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="MultiBootSelector" position="0,0" size="1280,720" title="Main menu">
+    <eLabel backgroundColor="fenrisBackground" foregroundColor="fenrisBackground" name="" position="165,35" size="950,650" zPosition="-10" />
+    <eLabel backgroundColor="fenrisBorder" position="1114,33" size="3,655" transparent="0" zPosition="-5" />
+    <eLabel backgroundColor="fenrisBorder" position="162,34" size="3,655" transparent="0" zPosition="-5" />
+    <eLabel backgroundColor="fenrisBorder" position="163,685" size="952,3" transparent="0" zPosition="-5" />
+    <eLabel backgroundColor="fenrisBorder" position="164,33" size="952,3" transparent="0" zPosition="-5" />
+    <eLabel backgroundColor="fenrisBackground" position="1115,33" size="2,655" transparent="0" zPosition="0" />
+    <eLabel backgroundColor="fenrisBackground" position="165,33" size="952,2" transparent="0" zPosition="0" />
+    <eLabel backgroundColor="fenrisBackground" position="163,686" size="954,2" transparent="0" zPosition="0" />
+    <eLabel backgroundColor="fenrisBackground" position="165,33" size="0,655" transparent="0" zPosition="0" />
+    <!-- /* Uhrzeit/Datum -->
+    <widget backgroundColor="fenrisBackground" font="Regular; 43" halign="center" position="863,463" render="Label" size="65,60" source="global.CurrentTime" transparent="1" valign="bottom" zPosition="1" foregroundColor="fenrisTextUhr">
+      <convert type="ClockToText">Format:%H</convert>
+    </widget>
+    <eLabel backgroundColor="fenrisBackground" font="Regular; 43" halign="center" position="920,460" size="15,60" text=":" transparent="1" valign="bottom" zPosition="1" foregroundColor="fenrisTextUhr" />
+    <widget backgroundColor="fenrisBackground" font="Regular; 43" halign="center" position="930,463" render="Label" size="65,60" source="global.CurrentTime" transparent="1" valign="bottom" zPosition="1" foregroundColor="fenrisTextUhr">
+      <convert type="ClockToText">Format:%M</convert>
+    </widget>
+    <eLabel backgroundColor="fenrisBackground" font="Regular; 32" halign="center" position="986,470" size="15,50" text=":" transparent="1" valign="bottom" zPosition="1" foregroundColor="fenrisTextUhr" />
+    <widget backgroundColor="fenrisBackground" font="Regular; 32" halign="center" position="996,472" render="Label" size="50,50" source="global.CurrentTime" transparent="1" valign="bottom" zPosition="1" foregroundColor="fenrisTextUhr">
+      <convert type="ClockToText">Format:%S</convert>
+    </widget>
+    <widget backgroundColor="fenrisBackground" font="Regular; 18" foregroundColor="fenrisTextDatum" halign="center" position="853,540" render="Label" size="203,30" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+      <convert type="ClockToText">Format:%d. %B</convert>
+    </widget>
+    <widget backgroundColor="fenrisBackground" font="Regular; 18" foregroundColor="fenrisTextDatum" halign="center" position="853,513" render="Label" size="203,30" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+      <convert type="ClockToText">Format:%A</convert>
+    </widget>
+    <!--Uhrzeit/Datum */-->
+    <!-- /*Buttons-->
+    <ePixmap alphatest="blend" pixmap="FenrisHD/buttons/key_red.png" position="170,635" size="30,40" />
+    <ePixmap alphatest="blend" pixmap="FenrisHD/buttons/key_green.png" position="414,635" size="30,40" />
+    <ePixmap alphatest="blend" pixmap="FenrisHD/buttons/key_yellow.png" position="655,635" size="30,40" />
+    <ePixmap alphatest="blend" pixmap="FenrisHD/buttons/key_blue.png" position="897,635" size="30,40" />
+    <widget backgroundColor="fenrisBackground" font="Regular; 20" halign="left" source="key_red" render="Label" position="204,640" size="210,24" transparent="1" zPosition="1" />
+    <widget backgroundColor="fenrisBackground" font="Regular; 20" halign="left" source="key_green" render="Label" position="446,640" size="210,24" transparent="1" zPosition="1" />
+    <widget backgroundColor="fenrisBackground" font="Regular; 20" halign="left" source="key_yellow" render="Label" position="687,640" size="210,24" transparent="1" zPosition="1" />
+    <widget backgroundColor="fenrisBackground" font="Regular; 20" halign="left" source="key_blue" render="Label" position="928,640" size="180,24" transparent="1" zPosition="1" />
+    <!--Buttons */-->
+    <widget source="description" render="Label" position="176,114" size="690,60" itemHeight="30" font="Regular; 20" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="background" foregroundColor="Text1" transparent="1" halign="center" />
+    <widget name="config" position="176,190" size="690,380" zPosition="1" transparent="1" alphatest="blend" font="Regular; 22" />
+    <widget font="Regular; 42" position="177,44" render="Label" size="850,50" source="Title" transparent="1" valign="top" zPosition="1" halign="left" backgroundColor="background" foregroundColor="TextInfo" />
+  </screen>
+  <screen name="FlashImage" position="center,center" size="700,605" flags="wfNoBorder" backgroundColor="fenrisBackground">
+    <widget name="header" position="5,10" size="e-10,50" font="Regular;40" backgroundColor="fenrisBackground" />
+    <widget name="info" position="5,60" size="e-10,130" font="Regular;24" backgroundColor="fenrisBackground" />
+    <widget name="progress" position="5,e-39" size="e-10,24" backgroundColor="fenrisBackground2" />
   </screen>
 </skin>
